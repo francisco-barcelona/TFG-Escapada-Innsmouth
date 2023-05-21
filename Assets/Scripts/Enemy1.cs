@@ -10,6 +10,8 @@ public class Enemy1 : Enemy
     public float chaseRadius;
     public float attackRadius;
     public Animator anim;
+    [SerializeField]
+    public static bool zadokTalk = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,24 +28,26 @@ public class Enemy1 : Enemy
 
     void CheckDistance()
     {
-        if(Vector3.Distance(target.position, transform.position) <= chaseRadius)
+        if(zadokTalk == true)
         {
-            if(currentState == EnemyState.idle || currentState == EnemyState.walk && Vector3.Distance(target.position, transform.position) > attackRadius)
+            if (Vector3.Distance(target.position, transform.position) <= chaseRadius)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);                
-                ChangeState(EnemyState.walk);                
-                anim.SetBool("wakeUp",true);
-            }            
+                if (currentState == EnemyState.idle || currentState == EnemyState.walk && Vector3.Distance(target.position, transform.position) > attackRadius)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                    ChangeState(EnemyState.walk);
+                    anim.SetBool("wakeUp", true);
+                }
+            }
+            else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
+            {
+                anim.SetBool("wakeUp", false);
+            }
+            else
+            {
+                anim.SetBool("wakeUp", false);
+            }
         }
-        else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
-        {
-            anim.SetBool("wakeUp", false);
-        }
-        else
-        {
-            anim.SetBool("wakeUp", false);
-        }
-        
     }
 
     private void ChangeState(EnemyState newState)

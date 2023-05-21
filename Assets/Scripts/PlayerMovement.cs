@@ -19,6 +19,16 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 change;
     private Animator animator;
     public PlayerState currentState;
+
+    public static bool talkedTaichiMan = false;
+    public static bool talkedTicketSeller = false;
+    public static bool talkedLibrarian = false;
+    public static bool talkedMrsTilton = false;
+    public static bool talkedCar = false;
+    public static bool talkedSeller1 = false;
+    public static bool talkedZadok = false;
+    public static bool isWhisky = false;
+    public static bool isCarInnsmouth = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +47,15 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(AttackCo());
         }
 
+
+
     }
     void FixedUpdate()
     {
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
         change = Vector3.zero;
         change.y = Input.GetAxisRaw("Vertical");
         change.x = Input.GetAxisRaw("Horizontal");

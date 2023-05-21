@@ -6,6 +6,11 @@ TagManager:
   tags:
   - breakable
   - enemy
+  - CarInnsmouth
+  - playerCam
+  - playerCam2
+  - Timer
+  - Frogman
   layers:
   - Default
   - TransparentFX
