@@ -29,9 +29,8 @@ public class Timer : MonoBehaviour
             }
             else
             {
-                Debug.Log(countDown);
                 // Que salgan los monstruos
-                Enemy2.isVisible = true;
+                //Enemy2.isVisible = true;
             }
 
             text.text = System.Math.Round(countDown, 0).ToString();

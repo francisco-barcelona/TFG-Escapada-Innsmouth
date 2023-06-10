@@ -77,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 47375091
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 485429611, guid: 753bdccf832275d4ca2f8a3d36d9a3b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -214,7 +214,7 @@ MonoBehaviour:
   health: 100
   enemyName: The Deep
   baseAttack: 2
-  moveSpeed: 5
+  moveSpeed: 3
   target: {fileID: 0}
   homePosition: {fileID: 0}
   chaseRadius: 10

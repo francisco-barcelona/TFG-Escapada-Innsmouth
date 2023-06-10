@@ -1,6 +1,8 @@
 -> Zadok
 
 === Zadok ===
+...
+
 Jo: Tot això ho va fer l'epidèmia?
 
 Zadok continua bevent sense dir res... El quart de whisky no li durarà gaire, potser hauria d'anar a comprar més.
@@ -103,5 +105,12 @@ E-AAAH-AH!E-AAAH-AH!E-AAAH-AH!E-AAAH-AH!
 Zadok: Ens han vist! Ens han vist! Marxi del poble abans que sigui massa tard! CORRI!
 
 Jo: Esperi, esperi... Encara tinc preguntes...
+
+Zadok: Res de preguntes, faci exactament el que li dic si vol viure, ENTESOS?
+
+Jo: Ostres, d'scord, d'acord.
+
+Zadok: Te 20 segons per deixar enrere l'escull del Diable, si triga més els 'profunds', els monstres, l'enxamparan i el mataran en un instant. Tenen una força sobrehumana. Els del poble també se li llançaran a sobre, deixi'ls enrere, tracti d'esquivar-los o faci camí amb el seu bastó. Pot trobar gerros amb poció de vida pel poble, però per l'amor de Déu, surti del poble tan ràpid com pugui! Ha d'escapar d'Innsmouth tan ràpid com sigui possible!
+
 ->DONE
 -> END

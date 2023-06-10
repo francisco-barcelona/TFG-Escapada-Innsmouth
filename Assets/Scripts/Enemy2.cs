@@ -10,17 +10,12 @@ public class Enemy2 : Enemy
     public float chaseRadius;
     public float attackRadius;
     public Animator anim;
-    public static bool isVisible = false;
     public static GameObject frogman;
     // Start is called before the first frame update
     void Start()
-    {
-        if(isVisible == false)
-        {
-            frogman = GameObject.FindGameObjectWithTag("Frogman");
-            frogman.GetComponent<Renderer>().enabled = false;
-        }
-        Debug.Log(isVisible);
+    {        
+        frogman = GameObject.FindGameObjectWithTag("Frogman");
+        frogman.GetComponent<Renderer>().enabled = false;
         currentState = EnemyState.idle;
         anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
@@ -34,31 +29,28 @@ public class Enemy2 : Enemy
 
     void CheckDistance()
     {
-        if(isVisible == true)
+        if (StaticValues.canEnemy2Attack == true)
         {
-            Debug.Log(isVisible);
-            Debug.Log("Dentro de checkDistance");
-            frogman.GetComponent<Renderer>().enabled = true;
-            Debug.Log("es visible?");
-            Debug.Log(frogman.GetComponent<Renderer>().enabled);
-            if (Vector3.Distance(target.position, transform.position) <= chaseRadius)
-            {
-                if (currentState == EnemyState.idle || currentState == EnemyState.walk && Vector3.Distance(target.position, transform.position) > attackRadius)
+                frogman.GetComponent<Renderer>().enabled = true;
+                if (Vector3.Distance(target.position, transform.position) <= chaseRadius)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-                    ChangeState(EnemyState.walk);
-                    anim.SetBool("wakeUp", true);
+                    if (currentState == EnemyState.idle || currentState == EnemyState.walk && Vector3.Distance(target.position, transform.position) > attackRadius)
+                    {
+                        transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                        ChangeState(EnemyState.walk);
+                        anim.SetBool("wakeUp", true);
+                    }
                 }
-            }
-            else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
-            {
-                anim.SetBool("wakeUp", false);
-            }
-            else
-            {
-                anim.SetBool("wakeUp", false);
-            }
+                else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
+                {
+                    anim.SetBool("wakeUp", false);
+                }
+                else
+                {
+                    anim.SetBool("wakeUp", false);
+                }
         }
+            
     }
 
     private void ChangeState(EnemyState newState)
@@ -66,6 +58,14 @@ public class Enemy2 : Enemy
         if(currentState != newState)
         {
             currentState = newState;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player" && currentState != EnemyState.idle)
+        {
+            other.GetComponent<Health>().TakeDamage(baseAttack);
         }
     }
 }

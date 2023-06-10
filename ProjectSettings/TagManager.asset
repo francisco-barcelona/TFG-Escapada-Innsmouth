@@ -11,6 +11,11 @@ TagManager:
   - playerCam2
   - Timer
   - Frogman
+  - BigPotion
+  - MusicNewburyport
+  - MusicArriveInnsmouth
+  - MusicEscape
+  - MoneyCount
   layers:
   - Default
   - TransparentFX
@@ -18,7 +23,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Background
   - 
   - 
   - 
@@ -47,6 +52,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: VeryBackGround
+    uniqueID: 2353588299
+    locked: 0
+  - name: Hidden
+    uniqueID: 1362797443
     locked: 0
   - name: Signs
     uniqueID: 1048521229

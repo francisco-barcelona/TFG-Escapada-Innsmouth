@@ -63,14 +63,9 @@ public class FollowThePath : MonoBehaviour
             {
                 waypointIndex += 1;
 
-                Debug.Log(waypointIndex);
-                Debug.Log(waypoints.Length - 1);
-
                 if (waypointIndex == waypoints.Length - 1)
                 {
                     GameObject traveler = GameObject.FindGameObjectWithTag("Player");
-
-                    Debug.Log(traveler);
 
                     // Player exits the car
                     traveler.transform.position = new Vector3(318, -34, 0);
@@ -81,7 +76,7 @@ public class FollowThePath : MonoBehaviour
 
                     yield return new WaitForSeconds(3);
                     traveler.GetComponent<Renderer>().enabled = true;
-                    PlayerMovement.isCarInnsmouth = true;
+                    StaticValues.isCarInnsmouth = true;
                 }
             }            
         }

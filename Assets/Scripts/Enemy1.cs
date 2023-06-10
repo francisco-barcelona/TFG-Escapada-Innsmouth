@@ -10,8 +10,6 @@ public class Enemy1 : Enemy
     public float chaseRadius;
     public float attackRadius;
     public Animator anim;
-    [SerializeField]
-    public static bool zadokTalk = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +26,7 @@ public class Enemy1 : Enemy
 
     void CheckDistance()
     {
-        if(zadokTalk == true)
+        if(StaticValues.canEnemy1Attack == true)
         {
             if (Vector3.Distance(target.position, transform.position) <= chaseRadius)
             {
@@ -55,6 +53,14 @@ public class Enemy1 : Enemy
         if(currentState != newState)
         {
             currentState = newState;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player" && currentState != EnemyState.idle)
+        {
+            other.GetComponent<Health>().TakeDamage(baseAttack);
         }
     }
 }

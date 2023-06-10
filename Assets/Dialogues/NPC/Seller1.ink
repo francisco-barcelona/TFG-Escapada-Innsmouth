@@ -35,7 +35,7 @@ Venedor: Qui sap els monstres que s'amaguen en aquestes cases... S'escolten soro
 
 Venedor: Ja m'agradaria saber què és cert i què no... Aquí ningú se'n refia dels forasters, però potser sé amb qui podria parlar... El vell Zadok Allen.
 
-Venedor: Zadok va nèixer aquí, té 96 anys, però no la pinta d'Innsmouth. Encara que té algun tipus de problema al cap... Viu mirant cap a tot arreu, com si alguna cosa estigués a punt de caure-li a sobre per fer-li mal. 
+Venedor: Zadok va nèixer aquí, té 96 anys, però no té la pinta d'Innsmouth. Encara que té algun tipus de problema al cap... Viu mirant cap a tot arreu, com si alguna cosa estigués a punt de caure-li a sobre per fer-li mal. 
 
 Venedor: Si està sobri no li treurà ni una sola paraula. Si el convida a una ampolla li explicarà històries fins que se li sequi la boca. Tot són bajanades, els disbarats d'un boig.
 
@@ -45,10 +45,6 @@ Venedor: Bona idea, senyor. Sempre està passejant al sud del moll i de l'escull
 
 Jo: Ok, gràcies. El meu pla es veure el poble i marxar amb l'autobu´s de les 8 de la tarda.
 
-Venedor: De res, però vaig amb molt de compte!
-
-Jo: Hi ha una alguna agrupació d'estudis històrics a la ciutat?
-
-Bibliotecari: Sí, la Societat d'Estudis Històrics a sota dels jardins. Entregui aquesta carta a la senyora Tilton de part meva. Estaran a punt de tancar.
+Venedor: De res, però vagi amb molt de compte!
 
 -> END

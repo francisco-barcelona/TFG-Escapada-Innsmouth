@@ -6,7 +6,6 @@ public class KnockBack : MonoBehaviour
 {
     public float thrust;
     public float knockTime;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("breakable") && this.gameObject.CompareTag("Player"))

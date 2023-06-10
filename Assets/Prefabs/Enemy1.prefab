@@ -77,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 47375091
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -137621952, guid: a8f3b05ba4ba3f546bd768035c82c9c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -173,11 +173,11 @@ MonoBehaviour:
   currentState: 0
   health: 2
   enemyName: Bombin
-  baseAttack: 1
-  moveSpeed: 1.5
+  baseAttack: 0.2
+  moveSpeed: 2
   target: {fileID: 0}
   homePosition: {fileID: 0}
-  chaseRadius: 24
+  chaseRadius: 50
   attackRadius: 1.25
   anim: {fileID: 0}
 --- !u!61 &678387356720913270

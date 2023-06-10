@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     public EnemyState currentState;
     public int health;
     public string enemyName;
-    public int baseAttack;
+    public float baseAttack;
     public float moveSpeed;    
 
     public void Knock(Rigidbody2D myRigidbody, float knockTime)

@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
 
-    private static DialogueManager instance;
+    //private static DialogueManager instance;
 
     public TextAsset inkJSONNPC;
     public CinemachineVirtualCamera vcam1;
@@ -29,17 +29,17 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
+        if (StaticValues.instance != null)
         {
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
-        instance = this;
+        StaticValues.instance = this;
     }
 
-    public static DialogueManager GetInstance()
-    {
-        return instance;
-    }
+    //public static DialogueManager GetInstance()
+    //{
+    //    return StaticValues.instance;
+    //}
 
     private void Start()
     {
@@ -71,6 +71,10 @@ public class DialogueManager : MonoBehaviour
         {
             ContinueStory();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitDialogueMode(inkJSONNPC);
+        }
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -84,22 +88,22 @@ public class DialogueManager : MonoBehaviour
 
         if (inkJSONNPC.name == "Newburyport-taichiman")
         {
-            PlayerMovement.talkedTicketSeller = true;
+            StaticValues.talkedTicketSeller = true;
         }
 
         if (inkJSONNPC.name == "TicketSeller")
         {
-            PlayerMovement.talkedLibrarian = true;
+            StaticValues.talkedLibrarian = true;
         }
 
         if (inkJSONNPC.name == "Librarian")
         {
-            PlayerMovement.talkedMrsTilton = true;
+            StaticValues.talkedMrsTilton = true;
         }
 
         if (inkJSONNPC.name == "MrsTilton")
         {
-            PlayerMovement.talkedCar = true;
+            StaticValues.talkedCar = true;
         }
 
         if (inkJSONNPC.name == "Car")
@@ -116,17 +120,31 @@ public class DialogueManager : MonoBehaviour
 
             FollowThePath.canRun = true;
 
-            PlayerMovement.talkedSeller1 = true;
+            StaticValues.talkedSeller1 = true;
+
+            // Player is in Innsmouth, stop happy music
+            GameObject musicNewburyport = GameObject.FindGameObjectWithTag("MusicNewburyport");
+            AudioSource audioNewburyport;
+            audioNewburyport = musicNewburyport.GetComponent<AudioSource>();
+            audioNewburyport.Stop();
+            //musicNewburyport.SetActive(false);
+
+            // Begin misterious music
+            GameObject musicInnsmouth = GameObject.FindGameObjectWithTag("MusicArriveInnsmouth");
+            AudioSource audioArriveInnsmouth;
+            audioArriveInnsmouth = musicInnsmouth.GetComponent<AudioSource>();
+            audioArriveInnsmouth.Play();
         }
 
         if (inkJSONNPC.name == "Seller1")
         {
-            PlayerMovement.talkedZadok = true;
-            PlayerMovement.isWhisky = true;
+            //StaticValues.talkedZadok = true;
+            StaticValues.isWhisky = true;
         }
 
         if (inkJSONNPC.name == "Zadok")
         {
+            StaticValues.talkedZadok = true;
             //PlayerMovement.talkedZadok = true;
             //PlayerMovement.isWhisky = true;
         }
@@ -142,9 +160,22 @@ public class DialogueManager : MonoBehaviour
 
         if(inkJSONNPC.name == "Zadok")
         {
-            Enemy1.zadokTalk = true;
-            Timer.canStartCountDown = true;
-            Timer.timerObj.GetComponent<MeshRenderer>().enabled = true;
+            StaticValues.canEnemy1Attack = true;
+            StaticValues.canEnemy2Attack = true;
+            //Timer.canStartCountDown = true;
+            //Timer.timerObj.GetComponent<MeshRenderer>().enabled = true;
+
+            // Stop misterious music
+            GameObject musicInnsmouth2 = GameObject.FindGameObjectWithTag("MusicArriveInnsmouth");
+            AudioSource audioArriveInnsmouth2;
+            audioArriveInnsmouth2 = musicInnsmouth2.GetComponent<AudioSource>();
+            audioArriveInnsmouth2.Stop();
+
+            // Begin Escape music
+            GameObject musicEscape = GameObject.FindGameObjectWithTag("MusicEscape");
+            AudioSource audioEscape;
+            audioEscape = musicEscape.GetComponent<AudioSource>();
+            audioEscape.Play();
         }        
 
     }

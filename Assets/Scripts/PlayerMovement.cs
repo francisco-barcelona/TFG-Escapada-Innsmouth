@@ -15,20 +15,14 @@ public enum PlayerState
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;
+    public int health;
     private Rigidbody2D myRigidBody;
-    private Vector3 change;
+    public static Vector3 change;
     private Animator animator;
     public PlayerState currentState;
 
-    public static bool talkedTaichiMan = false;
-    public static bool talkedTicketSeller = false;
-    public static bool talkedLibrarian = false;
-    public static bool talkedMrsTilton = false;
-    public static bool talkedCar = false;
-    public static bool talkedSeller1 = false;
-    public static bool talkedZadok = false;
-    public static bool isWhisky = false;
-    public static bool isCarInnsmouth = false;
+    [SerializeField] private AudioSource audioSourceHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,9 +35,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
-
-        if (Input.GetButtonDown("attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        
+        if (Input.GetButtonDown("attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger && StaticValues.isTalkingNow == false)
         {
+            audioSourceHit.Play();
             StartCoroutine(AttackCo());
         }
 
@@ -52,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        if (StaticValues.GetInstance().dialogueIsPlaying)
         {
             return;
         }

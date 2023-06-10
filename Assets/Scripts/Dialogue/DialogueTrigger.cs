@@ -23,43 +23,51 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if (playerInRange && !StaticValues.GetInstance().dialogueIsPlaying)
         {
-            visualCue.SetActive(true);
+            visualCue.SetActive(true);            
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log(inkJSON.name);
-                if(inkJSON.name == "Newburyport-taichiman")
+                Debug.Log("Enter dialogue manager");
+                if (inkJSON.name == "Newburyport-taichiman")
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    StaticValues.GetInstance().EnterDialogueMode(inkJSON);
                 }
-                if (inkJSON.name == "TicketSeller" && PlayerMovement.talkedTicketSeller == true)
+                if (inkJSON.name == "TicketSeller" && StaticValues.talkedTicketSeller == true)
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    StaticValues.GetInstance().EnterDialogueMode(inkJSON);
                 }
-                if (inkJSON.name == "Librarian" && PlayerMovement.talkedLibrarian == true)
+                if (inkJSON.name == "Librarian" && StaticValues.talkedLibrarian == true)
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    if(StaticValues.GetInstance() != null)
+                    {
+                        StaticValues.GetInstance().EnterDialogueMode(inkJSON);
+                    }
+                    else
+                    {
+                        Debug.Log("Librarian is null");
+                    }
+                    
                 }
-                if (inkJSON.name == "MrsTilton" && PlayerMovement.talkedMrsTilton == true)
+                if (inkJSON.name == "MrsTilton" && StaticValues.talkedMrsTilton == true)
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    StaticValues.GetInstance().EnterDialogueMode(inkJSON);
                 }
-                if (inkJSON.name == "Car" && PlayerMovement.talkedCar == true && PlayerMovement.isCarInnsmouth == false)
+                if (inkJSON.name == "Car" && StaticValues.talkedCar == true && StaticValues.isCarInnsmouth == false)
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    StaticValues.GetInstance().EnterDialogueMode(inkJSON);
                 }
-                if (inkJSON.name == "Seller1" && PlayerMovement.talkedSeller1 == true)
+                if (inkJSON.name == "Seller1" && StaticValues.talkedSeller1 == true)
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    StaticValues.GetInstance().EnterDialogueMode(inkJSON);
                 }
-                if (inkJSON.name == "Zadok" && PlayerMovement.talkedZadok == true && PlayerMovement.isWhisky == true)
+                if (inkJSON.name == "Zadok" && StaticValues.isWhisky == true)
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    StaticValues.GetInstance().EnterDialogueMode(inkJSON);
                 }
-                if (inkJSON.name == "CarBroken" && PlayerMovement.talkedCar == true && Enemy1.zadokTalk == true)
+                if (inkJSON.name == "CarBroken" && StaticValues.talkedCar == true && StaticValues.zadokTalk == true)
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    StaticValues.GetInstance().EnterDialogueMode(inkJSON);
                 }
 
             }
@@ -75,6 +83,7 @@ public class DialogueTrigger : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             playerInRange = true;
+            StaticValues.isTalkingNow = true;
         }
     }
 
@@ -83,6 +92,7 @@ public class DialogueTrigger : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             playerInRange = false;
+            StaticValues.isTalkingNow = false;
         }
     }
 }

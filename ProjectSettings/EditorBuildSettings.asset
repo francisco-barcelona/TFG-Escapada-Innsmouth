@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Intro.unity
+    guid: 7bebcf66a47135245b3f1052030836ff
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 7114792be01c17145b17cffd65146d54
+  - enabled: 1
+    path: Assets/Scenes/Joc.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/FidelJoc.unity
+    guid: 314289404dd1c30418871ec3bd53f77a
+  - enabled: 0
+    path: Assets/Scenes/Biblioteca.unity
+    guid: 09b9802eac9742b49a5945c6a4b137cb
+  - enabled: 1
+    path: Assets/Scenes/Guanyar.unity
+    guid: a05b85273926e2f4c97933887524e463
   m_configObjects: {}

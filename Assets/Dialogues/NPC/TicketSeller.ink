@@ -17,9 +17,9 @@ Jo: Què li passa a aquest autobús?
 
 Venedor: Passar per Innsmouth. No cal dir res més per disuadir al viatger.
 
-Venedor: El condueix Joe Sargent, nadiu de la ciutat. Pot agafar-lo a les 10 del matí i a les 7 de la tarda a la pròxima cruïlla al nord d'aquí. Jo no ho faria, el cotxe es cau a trossos.
+Venedor: El condueix Joe Sargent, nadiu de la ciutat. Pot agafar-lo a les 10 del matí i a les 7 de la tarda a la pròxima cruïlla al nord d'aquí. Jo no ho faria, el cotxe es cau a trossos, però ell li trepitja a fons, és increïble el que corre aquest tros de ferralla.
 
-Jo: Innsmouth? No apareix als mapes... Podria explicar-me alguna cosa més d'aquest lloc?
+Jo: Innsmouth, un altre cop? No apareix als mapes... Podria explicar-me alguna cosa més d'aquest lloc?
 
 Venedor: Ostres... Espero no haver-li provocat interès en aquest lloc...
 
@@ -29,7 +29,7 @@ Venedor: Han d'haver-hi més cases en ruïnes que habitants. Hi havia una refine
 
 Jo: Oh! Què més sap d'aquest home?
 
-Venedor: És el net d'Ober Marsh, la persona que va aixecar la refineria. La seva mare era dels Mars del Sud. Ell es va casar amb una jove d'Ipswich fa 50 anys. Un escàndol. La gent evita que se sàpiga que són d'Innsmouth, diguem que les criatures que tenen no surten molt normals...
+Venedor: És el net d'Obed Marsh, la persona que va aixecar la refineria. La seva mare era dels Mars del Sud. Ell es va casar amb una jove d'Ipswich fa 50 anys. Un escàndol. La gent evita que se sàpiga que són d'Innsmouth, diguem que les criatures que tenen no surten molt normals...
 
 Jo: Però perquè té tanta mala fama aquest lloc?
 
@@ -45,7 +45,7 @@ Venedor: Són els prejudicis racials de sempre. Hi ha alguna cosa estranya a la 
 
 Jo: Hi ha algun hotel a Innsmouth?
 
-Venedor: ...està Gilman House, però jo no li recomano que passi la nit en aquest lloc. Fa uns anys un inspector d'Indústria va passar la nit i quan van tornar només parlava de la gent tant estranya que hi havia a l'establiment i de la llengua inhumana que parlaven, com xipolleigs. 
+Venedor: ...està Gilman House, però jo no li recomano que passi la nit en aquest lloc. Fa anys un inspector d'Indústria va passar la nit i quan va tornar només parlava de la gent tant estranya que hi havia a l'establiment i de la llengua inhumana que parlaven, com xipolleigs. 
 
 Venedor: Quan va trencar l'alba va sortir corrents del poble... Deia que es va sentir observat tota la nit.
 
