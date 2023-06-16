@@ -16,6 +16,7 @@ TagManager:
   - MusicArriveInnsmouth
   - MusicEscape
   - MoneyCount
+  - arrow
   layers:
   - Default
   - TransparentFX

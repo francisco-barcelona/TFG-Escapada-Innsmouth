@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     public TextAsset inkJSONNPC;
     public CinemachineVirtualCamera vcam1;
     public Transform tFollowTarget;
+    public GameObject arrowHelper;
 
 
     private void Awake()
@@ -89,21 +90,26 @@ public class DialogueManager : MonoBehaviour
         if (inkJSONNPC.name == "Newburyport-taichiman")
         {
             StaticValues.talkedTicketSeller = true;
+            arrowHelper = GameObject.FindGameObjectWithTag("arrow");
+            arrowHelper.transform.position = new Vector3(23.64f, -9.12f, 0f);
         }
 
         if (inkJSONNPC.name == "TicketSeller")
         {
             StaticValues.talkedLibrarian = true;
+            arrowHelper.transform.position = new Vector3(22f, 0.85f, 0f);
         }
 
         if (inkJSONNPC.name == "Librarian")
         {
             StaticValues.talkedMrsTilton = true;
+            arrowHelper.transform.position = new Vector3(5.87f, -7.19f, 0f);
         }
 
         if (inkJSONNPC.name == "MrsTilton")
         {
             StaticValues.talkedCar = true;
+            arrowHelper.transform.position = new Vector3(24.92f, 0.48f, 0f);
         }
 
         if (inkJSONNPC.name == "Car")
@@ -134,12 +140,15 @@ public class DialogueManager : MonoBehaviour
             AudioSource audioArriveInnsmouth;
             audioArriveInnsmouth = musicInnsmouth.GetComponent<AudioSource>();
             audioArriveInnsmouth.Play();
+
+            arrowHelper.transform.position = new Vector3(319.55f, -26.81f, 0f);
         }
 
         if (inkJSONNPC.name == "Seller1")
         {
             //StaticValues.talkedZadok = true;
             StaticValues.isWhisky = true;
+            arrowHelper.transform.position = new Vector3(430.91f, 38.51f, 0f);
         }
 
         if (inkJSONNPC.name == "Zadok")
@@ -147,6 +156,7 @@ public class DialogueManager : MonoBehaviour
             StaticValues.talkedZadok = true;
             //PlayerMovement.talkedZadok = true;
             //PlayerMovement.isWhisky = true;
+            arrowHelper.transform.position = new Vector3(41f, 5.3f, 0f);
         }
 
         ContinueStory();
