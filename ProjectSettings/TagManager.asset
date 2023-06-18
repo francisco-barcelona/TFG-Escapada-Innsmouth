@@ -17,6 +17,8 @@ TagManager:
   - MusicEscape
   - MoneyCount
   - arrow
+  - ShowHelp
+  - Credits
   layers:
   - Default
   - TransparentFX

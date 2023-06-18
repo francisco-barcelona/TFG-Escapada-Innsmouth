@@ -5,7 +5,7 @@
 
 Preguntaré on és l'estació a aquest senyor... 
 
-Jo: Hola, què tal?
+Jo: Hola, com anem?
 
 Home: Hola, noi
 
@@ -23,7 +23,7 @@ Home: He, he... No res, no res... Disculpa, aquí ens fiquem massa on no toca i 
 
 Jo: No passa res... No m'havia adonat que els meus ulls eren especials, però on és el perill aquí?
 
-Home: Bé, ja he ficat la pota... Ves amb compte amb uns homes que vesteixen de negre. Tot i que els vegis dormir poden ser perillosos si els molestes. Són gent d'Innsmouth, estan dormint la mona... Si algú d'ells t'ataca intenta trobar gerros. Trenca'ls amb el bastó polsant a sobre de la tecla <espai> i a dins trobaràs pocions que et tornaran la salut.
+Home: Bé, ja he ficat la pota... Ves amb compte amb uns homes que vesteixen de negre. Tot i que els vegis dormir poden ser perillosos si els molestes. Són gent d'Innsmouth, estan dormint la mona... Si algú d'ells t'ataca, intenta trobar gerros. Trenca'ls amb el bastó polsant a sobre de la tecla <espai> i a dins trobaràs pocions que et tornaran la salut.
 
 Jo: Innsmouth?
 

@@ -9,7 +9,7 @@ Bibliotecari: Puagh! Què se li ha perdut allà? Faria bé en oblidar-se d'aques
 
 Bibliotecari: No seré jo qui li parli d'aquest lloc...
 
-Jo: Perquè?
+Jo: Per què?
 
 Bibliotecari: ...
 
